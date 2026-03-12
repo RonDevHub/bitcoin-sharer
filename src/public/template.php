@@ -13,20 +13,24 @@
                 darkMode: localStorage.getItem('theme') === 'dark' || 
                          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches),
                 toasts: [],
+                showErr: <?= $validationError ? 'true' : 'false' ?>,
                 toggleDark() {
                     this.darkMode = !this.darkMode;
                     localStorage.setItem('theme', this.darkMode ? 'dark' : 'light');
                 },
-                addToast(message, type = 'success') {
+                addToast(message) {
                     const id = Date.now();
-                    this.toasts.push({ id, message, type });
-                    setTimeout(() => {
-                        this.toasts = this.toasts.filter(t => t.id !== id);
-                    }, 3000);
+                    this.toasts.push({ id, message });
+                    setTimeout(() => { this.toasts = this.toasts.filter(t => t.id !== id); }, 3000);
                 },
                 copyToClipboard(text) {
                     navigator.clipboard.writeText(text).then(() => {
                         this.addToast('<?= $i18n->getLang() === "de" ? "Kopiert!" : "Copied!" ?>');
+                    });
+                },
+                init() {
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                        if (!localStorage.getItem('theme')) this.darkMode = e.matches;
                     });
                 }
             }
@@ -40,16 +44,12 @@
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-screen flex items-center justify-center p-4 transition-colors duration-500">
     
-    <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 w-full max-w-xs">
+    <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 w-full max-w-[200px]">
         <template x-for="toast in toasts" :key="toast.id">
-            <div x-transition:enter="transition ease-out duration-300"
-                 x-transition:enter-start="opacity-0 -translate-y-4"
-                 x-transition:enter-end="opacity-100 translate-y-0"
-                 x-transition:leave="transition ease-in duration-200"
-                 x-transition:leave-start="opacity-100 scale-100"
-                 x-transition:leave-end="opacity-0 scale-95"
-                 class="bg-white dark:bg-slate-800 shadow-2xl border-l-4 border-orange-500 p-4 rounded-lg flex items-center justify-between">
-                <span class="text-sm font-medium" x-text="toast.message"></span>
+            <div x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+                 x-transition:leave="transition ease-in duration-200" x-transition:leave-end="opacity-0 scale-95"
+                 class="bg-white dark:bg-slate-800 shadow-xl border-l-4 border-orange-500 p-3 rounded-lg text-center text-sm font-bold">
+                <span x-text="toast.message"></span>
             </div>
         </template>
     </div>
@@ -60,7 +60,7 @@
         </button>
     </div>
 
-    <div class="max-w-md w-full bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-2xl text-center border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+    <div class="max-w-md w-full bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-2xl text-center border border-slate-100 dark:border-slate-800 relative">
         <h1 class="text-3xl font-black mb-8 text-orange-500 tracking-tighter italic">₿ <?= $i18n->t('title') ?></h1>
 
         <?php if ($viewData): ?>
@@ -90,32 +90,35 @@
 
         <?php else: ?>
             <form method="POST" class="space-y-4">
-                <div class="relative">
-                    <input type="text" name="address" placeholder="<?= $i18n->t('input_placeholder') ?>" required 
-                           class="w-full p-5 rounded-2xl border border-slate-200 dark:bg-slate-800 dark:border-slate-700 focus:ring-4 focus:ring-orange-500/20 outline-none transition-all text-center font-medium <?= isset($validationError) ? 'border-red-500 ring-4 ring-red-500/10' : '' ?>">
-                    <?php if (isset($validationError)): ?>
-                        <p class="text-[10px] text-red-500 mt-2 font-bold uppercase">Das ist keine valide Bitcoin Adresse!</p>
-                    <?php endif; ?>
+                <div>
+                    <input type="text" name="address" @input="showErr = false"
+                           placeholder="<?= $i18n->t('input_placeholder') ?>" required 
+                           class="w-full p-5 rounded-2xl border border-slate-200 dark:bg-slate-800 dark:border-slate-700 focus:ring-4 focus:ring-orange-500/20 outline-none transition-all text-center font-medium <?= $validationError ? 'border-red-500 ring-2 ring-red-500/20' : '' ?>">
+                    <template x-if="showErr">
+                        <p x-transition class="text-[10px] text-red-500 mt-2 font-bold uppercase tracking-widest italic">
+                            <?= $i18n->t('validation_error') ?>
+                        </p>
+                    </template>
                 </div>
                 <button type="submit" class="w-full py-5 bg-orange-500 hover:bg-orange-600 text-white rounded-2xl font-black shadow-xl shadow-orange-500/20 transition-all active:scale-[0.98]">
                     <?= $i18n->t('generate_btn') ?>
                 </button>
             </form>
             
-            <?php if (isset($generatedLink)): ?>
-                <div class="mt-8 p-5 bg-green-500/5 dark:bg-green-500/10 rounded-[2rem] border border-green-500/20 cursor-pointer group"
+            <?php if ($generatedLink): ?>
+                <div class="mt-8 p-5 bg-green-500/5 dark:bg-green-500/10 rounded-[2rem] border border-green-500/20 cursor-pointer group relative"
                      @click="copyToClipboard('<?= $generatedLink ?>')">
                     <p class="text-[10px] uppercase font-black mb-2 text-green-600 tracking-tighter"><?= $i18n->t('your_link') ?></p>
                     <div class="flex items-center gap-2">
-                        <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-center font-mono text-[12px] text-slate-500 cursor-pointer">
+                        <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-center font-mono text-[10px] text-slate-500 cursor-pointer">
                         <span class="text-green-600 group-hover:scale-125 transition-transform">📋</span>
                     </div>
                 </div>
             <?php endif; ?>
         <?php endif; ?>
-      
-        <div class="mt-10 pt-6 border-t border-gray-100 dark:border-gray-700">
-            <p class="text-[9px] text-gray-400 uppercase tracking-[0.2em] font-medium"><?= $i18n->t('footer') ?></p>
+        
+        <div class="mt-12 pt-6 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-[9px] text-slate-400 uppercase tracking-[0.3em] font-black italic opacity-50"><?= $i18n->t('footer') ?></p>
         </div>
     </div>
 </body>
