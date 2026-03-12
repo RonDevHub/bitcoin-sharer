@@ -1,0 +1,10 @@
+{
+    "title": "BTC Sharer",
+    "input_placeholder": "Enter Bitcoin address",
+    "generate_btn": "Generate Link",
+    "copy_btn": "Copy Address",
+    "error_invalid": "Invalid or tampered link!",
+    "new_link": "Create another link",
+    "your_link": "Your anonymous link:",
+    "footer": "No database. No logs. Pure encryption."
+}
