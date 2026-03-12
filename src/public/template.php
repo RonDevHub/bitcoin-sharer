@@ -110,15 +110,15 @@
                      @click="copyToClipboard('<?= $generatedLink ?>')">
                     <p class="text-[10px] uppercase font-black mb-2 text-green-600 tracking-tighter"><?= $i18n->t('your_link') ?></p>
                     <div class="flex items-center gap-2">
-                        <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-center font-mono text-[10px] text-slate-500 cursor-pointer">
+                        <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-center font-mono text-[12px] text-slate-500 cursor-pointer">
                         <span class="text-green-600 group-hover:scale-125 transition-transform">📋</span>
                     </div>
                 </div>
             <?php endif; ?>
         <?php endif; ?>
         
-        <div class="mt-12 pt-6 border-t border-slate-100 dark:border-slate-800">
-            <p class="text-[9px] text-slate-400 uppercase tracking-[0.3em] font-black italic opacity-50"><?= $i18n->t('footer') ?></p>
+         <div class="mt-10 pt-6 border-t border-gray-100 dark:border-gray-700">
+            <p class="text-[9px] text-gray-400 uppercase tracking-[0.2em] font-medium"><?= $i18n->t('footer') ?></p>
         </div>
     </div>
 </body>
