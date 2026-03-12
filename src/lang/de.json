@@ -3,9 +3,11 @@
     "input_placeholder": "Bitcoin Adresse eingeben",
     "generate_btn": "Link generieren",
     "copy_btn": "Adresse kopieren",
+    "click": "Klicken zum Kopieren",
+    "back": "Zurück",
     "error_invalid": "Ungültiger oder manipulierter Link!",
     "new_link": "Einen weiteren Link erstellen",
     "your_link": "Dein anonymer Link:",
     "validation_error": "Das ist keine valide Bitcoin Adresse!",
-    "footer": "Keine Datenbank. Keine Logs. Pure Verschlüsselung.<br>Erstellt mit ❤️ und ☕️ von <a href='https://github.com/RonDevHub/bitcoin-sharer' class='no-underline hover:underline text-orange-600 dark:text-orange-700' target='_blank'>RonDevHub</a>"
+    "footer": "Keine Datenbank. Keine Logs. Pure Verschlüsselung.<br>Erstellt mit ❤️ und ☕️ von <a href='https://github.com/RonDevHub/bitcoin-sharer' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>RonDevHub</a>"
 }
