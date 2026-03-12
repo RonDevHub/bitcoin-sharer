@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $i18n->t('title') ?></title>
+    <?php if ($viewData): ?>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Bitcoin Address Shared | <?= $i18n->t('title') ?></title>
+    <?php else: ?>
+        <title><?= $i18n->t('title') ?> - Share Bitcoin Addresses Anonymously</title>
+        <meta name="description" content="Share your Bitcoin address easily and securely without any database or logging. Pure client-side encryption for maximum privacy.">
+        <meta name="keywords" content="Bitcoin, BTC, Share Address, Anonymous, No Database, Privacy, QR Code Generator">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="RonDevHub">
+        
+        <meta property="og:title" content="<?= $i18n->t('title') ?> - Stateless BTC Sharing">
+        <meta property="og:description" content="The most private way to share your Bitcoin address. No logs, no database.">
+        <meta property="og:type" content="website">
+    <?php endif; ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script>
