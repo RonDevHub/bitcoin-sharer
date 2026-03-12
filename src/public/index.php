@@ -14,46 +14,45 @@ $i18n = new I18n();
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $viewData = null;
 $error = false;
+$validationError = false; // Initialisieren
 $generatedLink = null;
 $qrOutput = "";
 
+// LOGIK: Link Generierung
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['address'])) {
     $inputAddress = trim($_POST['address']);
     
-    // Bitcoin Regex für: Legacy (1...), P2SH (3...), Bech32/SegWit (bc1...)
+    // Bitcoin Regex: Legacy, P2SH, SegWit/Taproot (bc1...)
     $btcRegex = '/^(1[a-km-zA-HJ-NP-Z1-9]{25,34}|3[a-km-zA-HJ-NP-Z1-9]{25,34}|bc1[a-zA-HJ-NP-Z0-9]{25,90})$/i';
     
     if (preg_match($btcRegex, $inputAddress)) {
+        // NUR WENN VALIDE: Verschlüsseln
         $encrypted = $crypto->encrypt($inputAddress);
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
         $generatedLink = $protocol . $_SERVER['HTTP_HOST'] . "/v/" . $encrypted;
     } else {
-        $validationError = true; // Neue Variable für das Template
+        // SONST: Fehler flaggen
+        $validationError = true;
     }
 }
 
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['address'])) {
-    $encrypted = $crypto->encrypt(trim($_POST['address']));
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
-    $generatedLink = $protocol . $_SERVER['HTTP_HOST'] . "/v/" . $encrypted;
-}
-
+// LOGIK: Link Anzeige (View)
 if (str_starts_with($uri, '/v/')) {
     $hash = substr($uri, 3);
     $viewData = $crypto->decrypt($hash);
+    
     if (!$viewData) {
         $error = true;
     } else {
         $options = new QROptions([
-            'outputType' => QRCode::OUTPUT_MARKUP_SVG,
-            'eccLevel'   => QRCode::ECC_L,
-            'imageBase64' => false,
-            'xmlDeclaration' => false, // DAS HIER IST ENTSCHEIDEND
-            'addQuietzone' => true,
+            'outputType'     => QRCode::OUTPUT_MARKUP_SVG,
+            'eccLevel'       => QRCode::ECC_L,
+            'imageBase64'    => false,
+            'xmlDeclaration' => false, 
+            'addQuietzone'   => true,
         ]);
         $qrOutput = (new QRCode($options))->render($viewData);
     }
 }
 
-Renderer::render((string)$viewData, $error, $generatedLink, $i18n, $qrOutput);
+Renderer::render((string)$viewData, $error, $generatedLink, $i18n, $qrOutput, $validationError);
