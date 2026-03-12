@@ -119,7 +119,7 @@
         
          <div class="mt-10 pt-6 border-t border-gray-100 dark:border-gray-700">
             <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-medium"><?= $i18n->t('footer') ?></p>
-            <p class="text-base pt-5 text-gray-400 font-medium"><?= $i18n->t('copy') ?></p>
+            <p class="text-sm pt-3 text-gray-400 font-medium"><?= $i18n->t('copy') ?></p>
         </div>
     </div>
 </body>
