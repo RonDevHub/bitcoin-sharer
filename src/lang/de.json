@@ -6,5 +6,6 @@
     "error_invalid": "Ungültiger oder manipulierter Link!",
     "new_link": "Einen weiteren Link erstellen",
     "your_link": "Dein anonymer Link:",
+    "validation_error": "Das ist keine valide Bitcoin Adresse!",
     "footer": "Keine Datenbank. Keine Logs. Pure Verschlüsselung.<br>Erstellt mit ❤️ und ☕️ von <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a>"
 }
