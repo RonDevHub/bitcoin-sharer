@@ -6,5 +6,5 @@
     "error_invalid": "Ungültiger oder manipulierter Link!",
     "new_link": "Einen weiteren Link erstellen",
     "your_link": "Dein anonymer Link:",
-    "footer": "Keine Datenbank. Keine Logs. Pure Verschlüsselung."
+    "footer": "Keine Datenbank. Keine Logs. Pure Verschlüsselung.<br>Erstellt mit ❤️ und ☕️ von <a href='https://github.com/RonDevHub/mastodon-share' target='_blank'>RonDevHub</a>"
 }
