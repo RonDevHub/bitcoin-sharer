@@ -68,7 +68,7 @@
                  @click="copyToClipboard('<?= addslashes($viewData) ?>')">
                 <?= htmlspecialchars($viewData) ?>
                 <div class="absolute inset-0 flex items-center justify-center bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                    <span class="text-[10px] font-bold text-orange-600 uppercase">Klicken zum Kopieren</span>
+                    <span class="text-[10px] font-bold text-orange-600 uppercase"><?= $i18n->t('click') ?></span>
                 </div>
             </div>
             
@@ -86,7 +86,7 @@
             <div class="p-6 bg-red-50 dark:bg-red-950/30 text-red-500 rounded-3xl border border-red-100 dark:border-red-900/50 font-bold">
                 <?= $i18n->t('error_invalid') ?>
             </div>
-            <a href="/" class="block mt-6 underline text-sm">Zurück</a>
+            <a href="/" class="block mt-6 underline text-orange-500 dark:text-orange-600 text-sm"><?= $i18n->t('back') ?></a>
 
         <?php else: ?>
             <form method="POST" class="space-y-4">
