@@ -113,9 +113,9 @@
                 </div>
             <?php endif; ?>
         <?php endif; ?>
-        
-        <div class="mt-12 pt-6 border-t border-slate-100 dark:border-slate-800">
-            <p class="text-[9px] text-slate-400 uppercase tracking-[0.3em] font-black opacity-50"><?= $i18n->t('footer') ?></p>
+      
+        <div class="mt-10 pt-6 border-t border-gray-100 dark:border-gray-700">
+            <p class="text-[9px] text-gray-400 uppercase tracking-[0.2em] font-medium"><?= $i18n->t('footer') ?></p>
         </div>
     </div>
 </body>
