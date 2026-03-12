@@ -18,6 +18,22 @@ $generatedLink = null;
 $qrOutput = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['address'])) {
+    $inputAddress = trim($_POST['address']);
+    
+    // Bitcoin Regex für: Legacy (1...), P2SH (3...), Bech32/SegWit (bc1...)
+    $btcRegex = '/^(1[a-km-zA-HJ-NP-Z1-9]{25,34}|3[a-km-zA-HJ-NP-Z1-9]{25,34}|bc1[a-zA-HJ-NP-Z0-9]{25,90})$/i';
+    
+    if (preg_match($btcRegex, $inputAddress)) {
+        $encrypted = $crypto->encrypt($inputAddress);
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
+        $generatedLink = $protocol . $_SERVER['HTTP_HOST'] . "/v/" . $encrypted;
+    } else {
+        $validationError = true; // Neue Variable für das Template
+    }
+}
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['address'])) {
     $encrypted = $crypto->encrypt(trim($_POST['address']));
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
     $generatedLink = $protocol . $_SERVER['HTTP_HOST'] . "/v/" . $encrypted;
