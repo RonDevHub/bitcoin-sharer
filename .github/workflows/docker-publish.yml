@@ -4,8 +4,24 @@ on:
   push:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: PHP Syntax Check (Lint)
+        run: |
+          # Prüft alle PHP Dateien auf Syntaxfehler
+          find src -name "*.php" -exec php -l {} \;
+
   build:
+    needs: lint
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -27,4 +43,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/rondevhub/bitcoin-sharer:latest
+
+          tags: |
+            ghcr.io/rondevhub/bitcoin-sharer:latest
+            ghcr.io/rondevhub/bitcoin-sharer:${{ github.sha }}
