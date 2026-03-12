@@ -52,7 +52,7 @@ Da dieses Projekt keine Logs schreibt, hat selbst der Administrator keine Einsic
 
 ---
 
-Developed by Ronny (rondevhub)
+Entwickelt von Ronny (rondevhub)
 
 <a name="english"></a>
 # ₿ Bitcoin-Sharer (English)
