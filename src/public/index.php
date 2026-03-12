@@ -29,7 +29,13 @@ if (str_starts_with($uri, '/v/')) {
     if (!$viewData) {
         $error = true;
     } else {
-        $options = new QROptions(['outputType' => QRCode::OUTPUT_MARKUP_SVG, 'eccLevel' => QRCode::ECC_L]);
+        $options = new QROptions([
+            'outputType' => QRCode::OUTPUT_MARKUP_SVG,
+            'eccLevel'   => QRCode::ECC_L,
+            'imageBase64' => false,
+            'xmlDeclaration' => false, // DAS HIER IST ENTSCHEIDEND
+            'addQuietzone' => true,
+        ]);
         $qrOutput = (new QRCode($options))->render($viewData);
     }
 }
