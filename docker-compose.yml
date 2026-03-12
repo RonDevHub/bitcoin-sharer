@@ -1,0 +1,8 @@
+services:
+  bitcoin-sharer:
+    image: ghcr.io/rondevhub/bitcoin-sharer:latest
+    container_name: btc-sharer
+    restart: unless-stopped
+    environment:
+      - APP_KEY=DeinSuperGeheimerKeyHier # Unbedingt in Portainer ändern!
+    # Keine Volumes nötig, da alles stateless
