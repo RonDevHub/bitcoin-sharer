@@ -9,5 +9,6 @@
     "new_link": "Create another link",
     "your_link": "Your anonymous link:",
     "validation_error": "This is not a valid Bitcoin address!",
-    "footer": "No database. No logs. Pure encryption.<br>Created with ❤️ and ☕️ by <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a>"
+    "footer": "No database. No logs. Pure encryption.",
+    "copy": "Created with ❤️ and ☕️ by <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a>"
 }
