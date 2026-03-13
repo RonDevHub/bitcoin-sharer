@@ -8,6 +8,7 @@
 [![Buy me a coffee](https://mini-badges.rondevhub.de/icon/cuptogo/ko--fi.com-c1d82f-222/social "Buy me a coffee")](https://ko-fi.com/U6U31EV2VS)
 [![Sponsor me](https://mini-badges.rondevhub.de/icon/hearts-red/Sponsor_me/social "Sponsor me")](https://github.com/sponsors/RonDevHub)
 [![Pizza Power](https://mini-badges.rondevhub.de/icon/pizzaslice/Buy_me_a_pizza/social "Pizza Power")](https://www.paypal.com/paypalme/Depressionist1/4,99)
+[![Bitcoin Power](https://mini-badges.rondevhub.de/icon/bitcoin/Bitcoin-ff7b00/social/-666666 "Bitcoin Power")](https://btc-sharer.s3cr.net/v/Vv7pQfYHW3HDqOkKujhGo8DOokNoA9FD_v3pyzFLMHZKR1gyTFJRQ1A5RWZmM09hTjI5SFZsY2ZlQThGWVZPazBnbHczaTJ6UzVWZVVGcnYwMWEr)
 </div>
 <hr>
 
