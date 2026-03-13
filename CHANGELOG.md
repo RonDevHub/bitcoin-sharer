@@ -5,6 +5,7 @@
 - Favicon hinzugefügt
 - Docker Images für `linux/amd64,linux/arm64` hinzugefügt
 - dynamische Meta-Tags hinzugefügt, SEO-Content wird nur auf der Startseite angezeigt, die Viewseite wird von der Indexierung ausgeschlossen
+- `Alpine.js`mal etwas die Brille geputzt mit `json_encode` Markdown in HTML-Attributen zu verschachteln
   
 ## Sicherheit
 - kleine Sicherheitsprüfung für den `APP_KEY` eingebaut
