@@ -162,18 +162,15 @@
 
                     <div class="h-[1px] bg-green-500/10 mx-6"></div>
 
-                    <?php $htmlLink = '<a href="' . $generatedLink . '" target="_blank">' . $i18n->t('visit_site') . '</a>'; ?>
+                    <?php $htmlLink = '&lt;a href=&quot;' . $generatedLink . '&quot; target=&quot;_blank&quot;&gt;' . $i18n->t('visit_site') . '&lt;/a&gt;'; ?>
                     <div class="p-4 hover:bg-green-500/10 transition-colors cursor-pointer group rounded-[2rem]"
-                        @click="copyToClipboard(<?= json_encode($htmlLink) ?>)">
+                        @click="copyToClipboard('<?= addslashes($htmlLink) ?>')">
                         <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left"><?= $i18n->t('html_link') ?></p>
                         <div class="flex items-center justify-between px-2">
-                            <input type="text" readonly
-                                value="<?= htmlspecialchars($htmlLink, ENT_QUOTES) ?>"
-                                class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
+                            <input type="text" readonly value="<?= htmlspecialchars($htmlLink) ?>" class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
                             <span class="text-green-600 group-hover:scale-110 transition-transform ml-2 italic text-[10px] font-bold">HTML</span>
                         </div>
                     </div>
-
 
                     <div class="h-[1px] bg-green-500/10 mx-6"></div>
 
@@ -197,5 +194,4 @@
         </div>
     </div>
 </body>
-
 </html>
