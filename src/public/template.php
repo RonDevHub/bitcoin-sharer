@@ -182,12 +182,21 @@
 
                     <div class="h-[1px] bg-green-500/10 mx-6"></div>
 
-                    <?php $mdLink_shield = '[![' . $i18n->t('visit_site') . '](https://img.shields.io/badge/Bitcoin-spend-orange?logo=bitcoin&style=social "' . $i18n->t('visit_site') . '")](' . $generatedLink . ')'; ?>
+                    <?php
+                    $visitText = $i18n->t('visit_site');
+                    $mdLink_shield = '[![' . $visitText . '](https://img.shields.io/badge/Bitcoin-spend-orange?logo=bitcoin&style=social "' . $visitText . '")](' . $generatedLink . ')';
+                    $jsSafeLink = htmlspecialchars(json_encode($mdLink_shield), ENT_QUOTES, 'UTF-8');
+                    ?>
+
                     <div class="p-4 hover:bg-green-500/10 transition-colors cursor-pointer group rounded-[2rem]"
-                        @click="copyToClipboard('<?= addslashes($mdLink_shield) ?>')">
-                        <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left"><?= $i18n->t('shields_link') ?></p>
+                        @click="copyToClipboard(<?= $jsSafeLink ?>)">
+                        <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left">
+                            <?= $i18n->t('shields_link') ?>
+                        </p>
                         <div class="flex items-center justify-between px-2">
-                            <input type="text" readonly value="<?= htmlspecialchars($mdLink_shield) ?>" class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
+                            <input type="text" readonly
+                                value="<?= htmlspecialchars($mdLink_shield) ?>"
+                                class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
                             <span class="text-green-600 group-hover:scale-110 transition-transform ml-2 italic text-[10px] font-bold">MD</span>
                         </div>
                     </div>
