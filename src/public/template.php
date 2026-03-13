@@ -6,6 +6,8 @@
     <?php if ($viewData): ?>
         <meta name="robots" content="noindex, nofollow">
         <title>Bitcoin Address Shared | <?= $i18n->t('title') ?></title>
+        <link rel="icon" type="image/png" href="/logo.png">
+        <link rel="apple-touch-icon" href="/logo.png">
     <?php else: ?>
         <title><?= $i18n->t('title') ?> - Share Bitcoin Addresses Anonymously</title>
         <meta name="description" content="Share your Bitcoin address easily and securely without any database or logging. Pure client-side encryption for maximum privacy.">
@@ -13,6 +15,7 @@
         <meta name="robots" content="index, follow">
         <meta name="author" content="RonDevHub">
         <link rel="icon" type="image/png" href="/logo.png">
+        <link rel="apple-touch-icon" href="/logo.png">
         
         <meta property="og:title" content="<?= $i18n->t('title') ?> - Stateless BTC Sharing">
         <meta property="og:description" content="The most private way to share your Bitcoin address. No logs, no database.">
