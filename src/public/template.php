@@ -131,6 +131,14 @@
                         <span class="text-green-600 group-hover:scale-125 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 468 540"><path fill="currentColor" d="M126 90c0-39.8 32.2-72 72-72l198 0c39.8 0 72 32.2 72 72l0 234c0 39.8-32.2 72-72 72l-36 0 0 54c0 39.8-32.2 72-72 72L90 522c-39.8 0-72-32.2-72-72l0-234c0-39.8 32.2-72 72-72l36 0 0-54zm0 90l-36 0c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-54-126 0c-39.8 0-72-32.2-72-72l0-108zM432 90c0-19.9-16.1-36-36-36L198 54c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-198z"/></svg></span>
                     </div>
                 </div>
+                <div class="mt-8 p-5 bg-green-500/5 dark:bg-green-500/10 rounded-[2rem] border border-green-500/20 cursor-pointer group relative"
+                     @click="copyToClipboard('<?= $generatedLink ?>')">
+                    <p class="text-[10px] uppercase font-black mb-2 text-green-600 tracking-tighter"><?= $i18n->t('your_link') ?></p>
+                    <div class="flex items-center gap-2">
+                        <input type="text" readonly value="&lt;a href=&quot;<?= $generatedLink ?>&quot; target=&quot;_blank&quot;&gt;<?= $i18n->t('visit_site') ?>&lt;/a&gt;" class="w-full bg-transparent outline-none text-center font-mono text-[12px] text-slate-500 cursor-pointer">
+                        <span class="text-green-600 group-hover:scale-125 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 468 540"><path fill="currentColor" d="M126 90c0-39.8 32.2-72 72-72l198 0c39.8 0 72 32.2 72 72l0 234c0 39.8-32.2 72-72 72l-36 0 0 54c0 39.8-32.2 72-72 72L90 522c-39.8 0-72-32.2-72-72l0-234c0-39.8 32.2-72 72-72l36 0 0-54zm0 90l-36 0c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-54-126 0c-39.8 0-72-32.2-72-7２l0-1０８zM4３２ ９０c０-１９．９-１６．１-３６-３６-３６L１９８ ５４c－１９．９ ０－３６ １６．１－３６ ３６l０ －１９８c０ －１９．９ －１６．１ －３６ －３６ －３６l－１９８ －１９８z"/></svg></span>
+                    </div>
+                </div>
             <?php endif; ?>
         <?php endif; ?>
         
