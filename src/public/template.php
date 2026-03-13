@@ -12,7 +12,7 @@
         <meta name="keywords" content="Bitcoin, BTC, Share Address, Anonymous, No Database, Privacy, QR Code Generator">
         <meta name="robots" content="index, follow">
         <meta name="author" content="RonDevHub">
-        <link rel="icon" type="image/png" href="/img/logo.webp">
+        <link rel="icon" type="image/png" href="logo.png">
         
         <meta property="og:title" content="<?= $i18n->t('title') ?> - Stateless BTC Sharing">
         <meta property="og:description" content="The most private way to share your Bitcoin address. No logs, no database.">
