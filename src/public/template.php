@@ -128,7 +128,7 @@
                     <p class="text-[10px] uppercase font-black mb-2 text-green-600 tracking-tighter"><?= $i18n->t('your_link') ?></p>
                     <div class="flex items-center gap-2">
                         <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-center font-mono text-[12px] text-slate-500 cursor-pointer">
-                        <span class="text-green-600 group-hover:scale-125 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 468 540"><path fill="currentColor" height="2em" d="M126 90c0-39.8 32.2-72 72-72l198 0c39.8 0 72 32.2 72 72l0 234c0 39.8-32.2 72-72 72l-36 0 0 54c0 39.8-32.2 72-72 72L90 522c-39.8 0-72-32.2-72-72l0-234c0-39.8 32.2-72 72-72l36 0 0-54zm0 90l-36 0c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-54-126 0c-39.8 0-72-32.2-72-72l0-108zM432 90c0-19.9-16.1-36-36-36L198 54c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-198z"/></svg></span>
+                        <span class="text-green-600 group-hover:scale-125 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 468 540"><path fill="currentColor" d="M126 90c0-39.8 32.2-72 72-72l198 0c39.8 0 72 32.2 72 72l0 234c0 39.8-32.2 72-72 72l-36 0 0 54c0 39.8-32.2 72-72 72L90 522c-39.8 0-72-32.2-72-72l0-234c0-39.8 32.2-72 72-72l36 0 0-54zm0 90l-36 0c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-54-126 0c-39.8 0-72-32.2-72-72l0-108zM432 90c0-19.9-16.1-36-36-36L198 54c-19.9 0-36 16.1-36 36l0 198c0 19.9 16.1 36 36 36l198 0c19.9 0 36-16.1 36-36l0-198z"/></svg></span>
                     </div>
                 </div>
             <?php endif; ?>
