@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <div class="mt-8 p-5 bg-green-500/5 dark:bg-green-500/10 rounded-[2rem] border border-green-500/20 cursor-pointer group relative"
-                     @click="copyToClipboard('<?= $generatedLink ?>')">
+                     @click="copyToClipboard('&lt;a href=&quot;<?= $generatedLink ?>&quot; target=&quot;_blank&quot;&gt;<?= $i18n->t('visit_site') ?>&lt;/a&gt;')">
                     <p class="text-[10px] uppercase font-black mb-2 text-green-600 tracking-tighter"><?= $i18n->t('your_link') ?></p>
                     <div class="flex items-center gap-2">
                         <input type="text" readonly value="&lt;a href=&quot;<?= $generatedLink ?>&quot; target=&quot;_blank&quot;&gt;<?= $i18n->t('visit_site') ?>&lt;/a&gt;" class="w-full bg-transparent outline-none text-center font-mono text-[12px] text-slate-500 cursor-pointer">
