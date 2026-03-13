@@ -8,6 +8,10 @@
     "error_invalid": "Invalid or tampered link!",
     "new_link": "Create another link",
     "your_link": "Your anonymous link:",
+    "html_link": "HTML",
+    "md_link": "Markdown",
+    "shields_link": "Shields.io",
+    "visit_site": "Bitcoin Sharer",
     "validation_error": "This is not a valid Bitcoin address!",
     "footer": "No database. No logs. Pure encryption.",
     "copy": "Created with ❤️ and ☕️ by <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a>"
