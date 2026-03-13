@@ -22,7 +22,7 @@
         <meta property="og:description" content="The most private way to share your Bitcoin address. No logs, no database.">
         <meta property="og:type" content="website">
     <?php endif; ?>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script>
         tailwind.config = {
