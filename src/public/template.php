@@ -152,11 +152,7 @@
                         <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left"><?= $i18n->t('your_link') ?></p>
                         <div class="flex items-center justify-between px-2">
                             <input type="text" readonly value="<?= $generatedLink ?>" class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
-                            <span class="text-green-600 group-hover:scale-110 transition-transform ml-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h140.1L432 147.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V147.9c0-12.7-5.1-24.9-14.1-33.9L330.1 10.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z" />
-                                </svg>
-                            </span>
+                            <span class="text-green-600 group-hover:scale-110 transition-transform ml-2 italic text-[10px] font-bold">LINK</span>
                         </div>
                     </div>
 
@@ -178,6 +174,18 @@
                     <div class="p-4 hover:bg-green-500/10 transition-colors cursor-pointer group rounded-[2rem]"
                         @click="copyToClipboard('<?= addslashes($mdLink) ?>')">
                         <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left"><?= $i18n->t('md_link') ?></p>
+                        <div class="flex items-center justify-between px-2">
+                            <input type="text" readonly value="<?= htmlspecialchars($mdLink) ?>" class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
+                            <span class="text-green-600 group-hover:scale-110 transition-transform ml-2 italic text-[10px] font-bold">MD</span>
+                        </div>
+                    </div>
+
+                    <div class="h-[1px] bg-green-500/10 mx-6"></div>
+
+                    <?php $mdLink = '[![' . $i18n->t('visit_site') . '](https://img.shields.io/badge/Bitcoin-spend-orange?logo=bitcoin&style=social "' . $i18n->t('visit_site') . '")](' . $generatedLink . ')'; ?>
+                    <div class="p-4 hover:bg-green-500/10 transition-colors cursor-pointer group rounded-[2rem]"
+                        @click="copyToClipboard('<?= addslashes($mdLink) ?>')">
+                        <p class="text-[9px] uppercase font-black mb-1 text-green-600/60 tracking-tighter ml-2 text-left"><?= $i18n->t('shields_link') ?></p>
                         <div class="flex items-center justify-between px-2">
                             <input type="text" readonly value="<?= htmlspecialchars($mdLink) ?>" class="w-full bg-transparent outline-none text-left font-mono text-[11px] text-slate-500 cursor-pointer">
                             <span class="text-green-600 group-hover:scale-110 transition-transform ml-2 italic text-[10px] font-bold">MD</span>
