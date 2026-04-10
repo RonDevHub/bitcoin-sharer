@@ -1,30 +1,30 @@
+FROM php:8.3-fpm-alpine AS builder
+
+WORKDIR /app
+COPY composer.json composer.lock ./
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
+
+COPY . .
+RUN composer dump-autoload --optimize --no-dev --classmap-authoritative
+
 FROM php:8.3-fpm-alpine
 
-# Installiere System-Abhängigkeiten und PHP-Erweiterungen
 RUN apk add --no-cache nginx supervisor \
-    && docker-php-ext-install opcache
+    && docker-php-ext-install opcache \
+    && mkdir -p /var/log/supervisor /var/run/nginx
 
-# Composer installieren
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Arbeitsverzeichnis
 WORKDIR /var/www/html
 
-# Nginx Konfiguration (No Logs!)
 COPY docker/nginx.conf /etc/nginx/http.d/default.conf
-
-# App-Dateien kopieren
-COPY . .
-
-# Abhängigkeiten installieren
-RUN composer install --no-dev --optimize-autoloader
-
-# Rechte setzen
-RUN chown -R www-data:www-data /var/www/html
-
-# Supervisor für Nginx & PHP-FPM
 COPY docker/supervisord.conf /etc/supervisord.conf
+
+COPY --from=builder /app /var/www/html
+
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
 
 EXPOSE 80
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
