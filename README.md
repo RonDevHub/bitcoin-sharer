@@ -2,14 +2,14 @@
 
 <div align="center">
   
-![Created](https://mini-badges.rondevhub.de/forgejo/RonDevHub/bitcoin-sharer/created-at/*/*/de) ![GitHub Repo stars](https://mini-badges.rondevhub.de/forgejo/RonDevHub/bitcoin-sharer/lastcommit/*/*/de) ![GitHub Repo stars](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/stars/*/*/de) ![GitHub Repo stars](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/issues/*/*/de) ![GitHub Repo language](https://mini-badges.rondevhub.de/forgejo/RonDevHub/bitcoin-sharer/language/*/*/de) ![GitHub Repo license](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/license/*/*/de) ![GitHub Repo release](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/release/*/*/de) ![GitHub Repo release](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/forks/*/*/de) ![GitHub Repo stars](https://mini-badges.rondevhub.de/github/RonDevHub/bitcoin-sharer/watchers) ![status-badge](https://ci.commitcloud.net/api/badges/5/status.svg)
+![Created](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/created-at/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/lastcommit/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/stars/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/issues/*/*/de) ![GitHub Repo language](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/language/*/*/de) ![GitHub Repo license](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/license/*/*/de) ![GitHub Repo release](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/release/*/*/de) ![GitHub Repo release](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/forks/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/watchers) ![status-badge](https://ci.commitcloud.net/api/badges/5/status.svg)
 
-![GHCR Pulls](https://ghcr-badge.elias.eu.org/shield/rondevhub/bitcoin-sharer)
+![GHCR Pulls](https://ghcr-badge.elias.eu.org/shield/rondev/bitcoin-sharer)
 
-[![Buy me a coffee](https://mini-badges.rondevhub.de/icon/cuptogo/Buy_me_a_Coffee-c1d82f-222/for-the-badge "Buy me a coffee")](https://www.buymeacoffee.com/RonDev)
-[![Buy me a coffee](https://mini-badges.rondevhub.de/icon/cuptogo/ko--fi.com-c1d82f-222/for-the-badge "Buy me a coffee")](https://ko-fi.com/U6U31EV2VS)
-[![Pizza Power](https://mini-badges.rondevhub.de/icon/paypal/PayPal/for-the-badge "Pizza Power")](https://www.paypal.com/donate/?hosted_button_id=PWY939TPCQ3RA)
-[![Bitcoin Power](https://mini-badges.rondevhub.de/icon/bitcoin/Bitcoin-ff7b00/for-the-badge/-666666 "Bitcoin Power")](https://btc-sharer.s3cr.net/v/Vv7pQfYHW3HDqOkKujhGo8DOokNoA9FD_v3pyzFLMHZKR1gyTFJRQ1A5RWZmM09hTjI5SFZsY2ZlQThGWVZPazBnbHczaTJ6UzVWZVVGcnYwMWEr)
+[![Buy me a coffee](https://mini-badges.rondev.de/icon/cuptogo/Buy_me_a_Coffee-c1d82f-222/for-the-badge "Buy me a coffee")](https://www.buymeacoffee.com/RonDev)
+[![Buy me a coffee](https://mini-badges.rondev.de/icon/cuptogo/ko--fi.com-c1d82f-222/for-the-badge "Buy me a coffee")](https://ko-fi.com/U6U31EV2VS)
+[![Pizza Power](https://mini-badges.rondev.de/icon/paypal/PayPal/for-the-badge "Pizza Power")](https://www.paypal.com/donate/?hosted_button_id=PWY939TPCQ3RA)
+[![Bitcoin Power](https://mini-badges.rondev.de/icon/bitcoin/Bitcoin-ff7b00/for-the-badge/-666666 "Bitcoin Power")](https://btc-sharer.s3cr.net/v/Vv7pQfYHW3HDqOkKujhGo8DOokNoA9FD_v3pyzFLMHZKR1gyTFJRQ1A5RWZmM09hTjI5SFZsY2ZlQThGWVZPazBnbHczaTJ6UzVWZVVGcnYwMWEr)
 </div>
 <hr>
 
@@ -39,7 +39,7 @@ Das Projekt ist vollständig dockerisiert und optimiert für die Nutzung mit **P
 ```yaml
 services:
   bitcoin-sharer:
-    image: ghcr.io/rondevhub/bitcoin-sharer:latest
+    image: ghcr.io/rondev/bitcoin-sharer:latest
     container_name: btc-sharer
     restart: unless-stopped
     ports:
@@ -54,7 +54,7 @@ Da dieses Projekt keine Logs schreibt, hat selbst der Administrator keine Einsic
 
 ---
 
-Entwickelt von Ronny (rondevhub)
+Entwickelt von Ronny (rondev)
 
 <a name="english"></a>
 # ₿ Bitcoin-Sharer (English)
@@ -82,7 +82,7 @@ The project is fully dockerized and optimized for use with Portainer and Cloudfl
 ```yaml
 services:
   bitcoin-sharer:
-    image: ghcr.io/rondevhub/bitcoin-sharer:latest
+    image: ghcr.io/rondev/bitcoin-sharer:latest
     container_name: btc-sharer
     restart: unless-stopped
     ports:
@@ -97,4 +97,4 @@ Since this project does not write logs, even the administrator has no insight in
 
 ---
 
-Developed by Ronny (rondevhub)
+Developed by Ronny (rondev)
