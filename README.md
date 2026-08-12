@@ -2,9 +2,8 @@
 
 <div align="center">
   
-![Created](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/created-at/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/lastcommit/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/stars/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/issues/*/*/de) ![GitHub Repo language](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/language/*/*/de) ![GitHub Repo license](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/license/*/*/de) ![GitHub Repo release](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/release/*/*/de) ![GitHub Repo release](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/forks/*/*/de) ![GitHub Repo stars](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/watchers) ![status-badge](https://ci.commitcloud.net/api/badges/5/status.svg)
+![Created](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/created-at/*/*/en) ![GitHub Repo stars](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/updated-at/*/*/en) ![GitHub Repo stars](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/size/*/*/en) ![GitHub Repo language](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/language/*/*/en) ![GitHub Repo license](https://mini-badges.rondev.de/github/RonDevHub/bitcoin-sharer/license/*/*/en) ![GitHub Repo release](https://mini-badges.rondev.de/forgejo/RonDevHub/bitcoin-sharer/release/*/*/en) ![status-badge](https://ci.commitcloud.net/api/badges/5/status.svg)
 
-![GHCR Pulls](https://ghcr-badge.elias.eu.org/shield/rondev/bitcoin-sharer)
 
 [![Buy me a coffee](https://mini-badges.rondev.de/icon/cuptogo/Buy_me_a_Coffee-c1d82f-222/for-the-badge "Buy me a coffee")](https://www.buymeacoffee.com/RonDev)
 [![Buy me a coffee](https://mini-badges.rondev.de/icon/cuptogo/ko--fi.com-c1d82f-222/for-the-badge "Buy me a coffee")](https://ko-fi.com/U6U31EV2VS)
