@@ -1,0 +1,18 @@
+{
+    "title": "BTC Sharer",
+    "input_placeholder": "Wprowadź adres Bitcoin",
+    "generate_btn": "Wygeneruj link",
+    "copy_btn": "Kopiuj adres",
+    "click": "Kliknij, aby skopiować",
+    "back": "Wstecz",
+    "error_invalid": "Nieprawidłowy lub zmodyfikowany link!",
+    "new_link": "Utwórz kolejny link",
+    "your_link": "Twój anonimowy link:",
+    "html_link": "HTML",
+    "md_link": "Markdown",
+    "shields_link": "Shields.io",
+    "visit_site": "Bitcoin Sharer",
+    "validation_error": "To nie jest prawidłowy adres Bitcoin!",
+    "footer": "Brak bazy danych. Brak logów. Czyste szyfrowanie.",
+    "copy": "Stworzono z ❤️ i ☕️ przez <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Przekaż datek</a>"
+  }
