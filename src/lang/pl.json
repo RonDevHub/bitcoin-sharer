@@ -14,5 +14,5 @@
     "visit_site": "Bitcoin Sharer",
     "validation_error": "To nie jest prawidłowy adres Bitcoin!",
     "footer": "Brak bazy danych. Brak logów. Czyste szyfrowanie.",
-    "copy": "Stworzono z ❤️ i ☕️ przez <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Przekaż datek</a>"
+    "copy": "Stworzono z ❤️ i ☕️ przez <a href='https://github.com/RonDevHub/bitcoin-sharer' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Przekaż datek</a>"
   }
