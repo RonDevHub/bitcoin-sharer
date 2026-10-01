@@ -1,0 +1,18 @@
+{
+    "title": "BTC Sharer",
+    "input_placeholder": "Введіть Bitcoin-адресу",
+    "generate_btn": "Створити посилання",
+    "copy_btn": "Скопіювати адресу",
+    "click": "Натисніть, щоб скопіювати",
+    "back": "Назад",
+    "error_invalid": "Недійсне або пошкоджене посилання!",
+    "new_link": "Створити інше посилання",
+    "your_link": "Ваше анонімне посилання:",
+    "html_link": "HTML",
+    "md_link": "Markdown",
+    "shields_link": "Shields.io",
+    "visit_site": "Bitcoin Sharer",
+    "validation_error": "Це недійсна Bitcoin-адреса!",
+    "footer": "Без бази даних. Без логів. Чисте шифрування.",
+    "copy": "Створено з ❤️ та ☕️ авторами <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Підтримати</a>"
+}
