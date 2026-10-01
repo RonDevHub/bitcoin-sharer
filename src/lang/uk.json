@@ -14,5 +14,5 @@
     "visit_site": "Bitcoin Sharer",
     "validation_error": "Це недійсна Bitcoin-адреса!",
     "footer": "Без бази даних. Без логів. Чисте шифрування.",
-    "copy": "Створено з ❤️ та ☕️ авторами <a href='https://github.com/RonDevHub/bitcoin-sharer' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Підтримати</a>"
+    "copy": "Створено з ❤️ та ☕️ авторами <a href='https://github.com/RonDevHub/bitcoin-sharer' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>RonDevHub</a> - <a href='https://rondev.de/donate' class='no-underline hover:underline text-orange-500 dark:text-orange-600' target='_blank'>Підтримати</a>"
 }
