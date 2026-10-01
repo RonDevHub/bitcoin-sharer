@@ -1,9 +1,12 @@
 # Changelog
 
-## Sprachen
-- Ukrainisch
-- Italienisch
-- Französisch
-- Polnisch
-- Spanisch
-- Niederländisch
+## Languages
+- Ukrainian
+- Italian
+- French
+- Polish
+- Spanish
+- Dutch
+
+## Miscellaneous
+Donation link added
