@@ -7,8 +7,8 @@ class I18n {
 
     public function __construct() {
         // Erkennt 'de', 'en', etc. aus dem Header
-        $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en', 0, 8);
-        $this->currentLang = in_array($browserLang, ['de', 'en', 'ua', 'es', 'fr', 'it', 'nl', 'pl']) ? $browserLang : 'en';
+        $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? 'en', 0, 2);
+        $this->currentLang = in_array($browserLang, ['de', 'en']) ? $browserLang : 'en';
         
         // Fix für Pfad im Docker-Container
         $path = __DIR__ . "/../lang/" . $this->currentLang . ".json";
